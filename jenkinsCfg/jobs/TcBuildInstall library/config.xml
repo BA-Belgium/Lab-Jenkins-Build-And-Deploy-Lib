@@ -33,7 +33,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.BatchFile>
-      <command>powershell -ExecutionPolicy Bypass -File &quot;tcBuild.ps1&quot;</command>
+      <command>powershell -ExecutionPolicy Bypass -File &quot;TcAI/tcBuild.ps1&quot;</command>
       <configuredLocalRules/>
     </hudson.tasks.BatchFile>
   </builders>
