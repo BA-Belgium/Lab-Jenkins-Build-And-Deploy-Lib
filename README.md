@@ -47,10 +47,13 @@ Jenkins typically runs as a remote server to act as the delegating service for a
 5. Install suggested plugins
 6. From Dashboard, select **Manage Jenkins**
     - Security -> Agents -> TCP Port for inbound... = "Random"
+
     ![Local Image](docs/pics/Agents%20-%20Inbound%20ports.png)
+7. OPTIONAL for quick start: copy the configuration files of the TcAgent and Jobs described below in the appropriate folders of the Jenkins server
+    ![Local Image](docs/pics/Jenkins%20Nodes.png)
+    ![Local Image](docs/pics/Jenkins%20Jobs.png)
 
-
-#### Agent
+#### Jenkins Agent setup
 
 The agent will be responsible for executing our build and test processes. With common software stacks, build agents are often small, transient containers or virtual machines that are quickly deployed as needed and then cleaned up. Since we are building for TwinCAT, we need an agent that has both the TwinCAT realtime and XAE (or Visual Studio).
 
@@ -144,7 +147,7 @@ If we keep an eye on the Dashboard, sometime in the next two minutes (or so), we
 
 <a id="automation_interface"></a>
 
-### 6. Automation Interface
+### 6. TwinCAT Automation Interface
 
 All the standard pieces for an automated build pipeline are in place, so let's move on to the TwinCAT specific stuff. The most accessible means of automating a TwinCAT project build would be via the Automation Interface PowerShell API. The following script will open the solution (in the background), select the project and perform a build. 
 
